@@ -1,0 +1,258 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.contact {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  font-family: $fontPrimary;
+  color: $colorFont;
+  // background-color: rebeccapurple;
+  // &__email {
+  // }
+
+  &__form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 40%);
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    opacity: 0;
+    // background-color: green;
+  }
+
+  &__form-div {
+    // background-color: red;
+    position: relative;
+    height: 30%;
+  }
+
+  &__form-email,
+  &__form-textarea,
+  &__form-phone,
+  &__form-button {
+    grid-column: 1/3;
+  }
+
+  &__form-button {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    background-color: $colorFont;
+    color: $primaryColor;
+  }
+
+  &__form-span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    font-weight: 600;
+    // font-size: ;
+    transform: translate(-60%, -50%);
+    // background-color: red;
+  }
+
+  &__form-button:hover,
+  &__form-span:hover,
+  &__icon-arrow:hover {
+    box-shadow: 0 0 30px $backgroundHoverIntensive;
+  }
+
+  &__form-input,
+  &__form-input-email {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid $colorFont;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 18px;
+  }
+
+  &__icon-arrow {
+    float: right;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+  }
+
+  &__form-label {
+    // width: 10%;
+    // background-color: greenyellow;
+    position: absolute;
+    bottom: 5px;
+    font-size: 14px;
+    transition: transform 500ms ease;
+  }
+
+  //   &__form-label:hover {
+  //     bottom: 50px;
+  //   }
+
+  &__form-input:valid ~ &__form-label,
+  &__form-input-email:valid ~ &__form-label,
+  &__form-input-email:focus ~ &__form-label,
+  &__form-input:focus ~ &__form-label {
+    // background-color: red;
+    transform: translateY(-30px);
+  }
+
+  //   &__form-name {
+  //     background-color: transparent;
+  //   }
+  //   &__form-name:valid ~ &__form-label {
+  //     //   transform: translateX(20%);
+  //   }
+
+  //   &__form-phone {
+  //     background-color: transparent;
+  //   }
+
+  //   &__form-surname {
+  //     background-color: transparent;
+  //   }
+
+  // &__form-textarea {
+  //   background-color: transparent;
+  //   grid-column: 1/3;
+  // }
+
+  &__form-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-rows: repeat(6, minmax(10px, 80px));
+    grid-template-columns: repeat(2, 50%);
+    gap: 5px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+    background-color: $primaryColor;
+    opacity: 0;
+  }
+
+  &__email,
+  &__location,
+  &__phone {
+    // background-color: red;
+    font-weight: 100;
+    font-size: 17px;
+    font-family: $fontThird;
+  }
+
+  &__icon-email,
+  &__icon-phone,
+  &__icon-location {
+    font-size: 22px;
+    margin: 0 20px;
+  }
+
+  &__link-email,
+  &__link-phone,
+  &__link-location {
+    // background-color: red;
+    grid-column: 1/3;
+    color: $colorFont;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 500ms ease;
+  }
+
+  &__link-email:hover,
+  &__link-phone:hover,
+  &__link-location:hover {
+    background-color: $backgroundHover;
+  }
+
+  &__link-location,
+  &__link-phone,
+  &__link-email {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social {
+    grid-column: 1/3;
+  }
+
+  &__link-telegram,
+  &__link-whatsapp {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    margin: 0 30px;
+    border-radius: 50%;
+    text-align: center;
+    color: $colorFont;
+    background-color: $primaryColor;
+    border: 2px solid $colorFont;
+    transition-property: color background-color;
+    transition-duration: 400ms;
+    // transition: color 5s ease;
+    // transition: background 500ms ease;
+  }
+
+  &__link-telegram:hover,
+  &__link-whatsapp:hover {
+    // background-color: red;
+    background-color: $colorFont;
+    color: $primaryColor;
+    // box-shadow: 0 0 100px $backgroundHover;
+  }
+
+  &__icon-telegram,
+  &__icon-whatsapp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__subtitle {
+    grid-column: 1/3;
+    font-size: 60px;
+  }
+  // &__email
+
+  &__title {
+    display: block;
+    font-size: 84px;
+    text-align: center;
+    opacity: 0;
+  }
+
+  .show-fade-up {
+    opacity: 1;
+    @include fade-up;
+  }
+
+  .show-fade-left {
+    opacity: 1;
+    @include fade-left;
+  }
+
+  .show-fade-right {
+    opacity: 1;
+    @include fade-right;
+  }
+}

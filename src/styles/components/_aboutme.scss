@@ -1,0 +1,73 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.aboutme {
+  //   background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  padding-top: 100px;
+  color: $colorFont;
+  font-family: $fontPrimary;
+
+  &__content-images {
+    order: 1;
+    width: 600px;
+    height: 750px;
+  }
+
+  &__content-text {
+    order: 0;
+    width: 900px;
+    height: 750px;
+    opacity: 0;
+  }
+
+  &__description {
+    width: 633px;
+    margin: 0 auto;
+    margin-top: 128px;
+    font-size: 26px;
+    font-family: $fontSecundary;
+    text-align: center;
+    // background-color: red;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &__title {
+    // width: 50%;
+    display: block;
+    width: 400px;
+    // background-color: rebeccapurple;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 74px;
+    text-align: center;
+  }
+
+  .show-fade-bottom {
+    @include fade-bottom;
+    opacity: 1;
+  }
+
+  .show-fade-up {
+    @include fade-up;
+    opacity: 1;
+  }
+
+  &__title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $colorFont;
+  }
+}
