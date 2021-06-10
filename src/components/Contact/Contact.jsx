@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../styles/components/_contact.scss';
+// eslint-disable-next-line
 import { useForm, ValidationError } from '@formspree/react';
 // https://formspree.io/f/xrgrqnka
 

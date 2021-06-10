@@ -2,7 +2,7 @@
   "name": "portafolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sergiocasallas.github.io/portafolio/",
+  "homepage": "https://sergiocasallas.github.io/portafolio",
   "dependencies": {
     "@formspree/react": "^2.2.3",
     "@testing-library/jest-dom": "^5.12.0",
