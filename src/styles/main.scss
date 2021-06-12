@@ -20,3 +20,7 @@
 
 // 7. Themes
 @import 'themes/default';
+
+html {
+  overflow-x: hidden;
+}

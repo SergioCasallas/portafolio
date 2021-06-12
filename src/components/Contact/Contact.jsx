@@ -135,14 +135,28 @@ const Contact = () => {
               rel='noopener noreferrer'
               target='_blank'
               className='contact__link-whatsapp'>
-              <i className='contact__icon-whatsapp fab fa-whatsapp'></i>
+              <i className='contact__icon-social fab fa-whatsapp'></i>
             </a>
             <a
               target='_blank'
               className='contact__link-telegram'
               rel='noopener noreferrer'
               href='https://t.me/SergioCasallas'>
-              <i className='contact__icon-telegram fab fa-telegram-plane'></i>
+              <i className='contact__icon-social fab fa-telegram-plane'></i>
+            </a>
+            <a
+              target='_blank'
+              className='contact__link-linkedin'
+              rel='noopener noreferrer'
+              href='https://www.linkedin.com/in/sergio-casallas/'>
+              <i className='contact__icon-social fab fa-linkedin-in'></i>
+            </a>
+            <a
+              target='_blank'
+              className='contact__link-github'
+              rel='noopener noreferrer'
+              href='https://github.com/SergioCasallas'>
+              <i className='contact__icon-social fab fa-github'></i>
             </a>
           </div>
         </div>

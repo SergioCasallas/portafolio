@@ -189,7 +189,9 @@
   }
 
   &__link-telegram,
-  &__link-whatsapp {
+  &__link-whatsapp,
+  &__link-linkedin,
+  &__link-github {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
@@ -209,15 +211,16 @@
   }
 
   &__link-telegram:hover,
-  &__link-whatsapp:hover {
+  &__link-whatsapp:hover,
+  &__link-linkedin:hover,
+  &__link-github:hover {
     // background-color: red;
     background-color: $colorFont;
     color: $primaryColor;
     // box-shadow: 0 0 100px $backgroundHover;
   }
 
-  &__icon-telegram,
-  &__icon-whatsapp {
+  &__icon-social {
     position: absolute;
     top: 50%;
     left: 50%;

@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './styles/main.scss';
 import './styles/pages/_app.scss';
 import Nav from './components/Nav/Nav.jsx';
 import Inicio from './components/Inicio/Inicio.jsx';

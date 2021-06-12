@@ -24,9 +24,8 @@ const Aboutme = () => {
     window.addEventListener('scroll', () => {
       const topTextContent = textContentRef.current.getBoundingClientRect().top;
       const topImagen = imagenRef.current.getBoundingClientRect().top;
-      console.log(topTextContent);
       if (topTextContent <= 500) {
-        console.log('sexoAnal');
+        // console.log('sexoAnal');
         textContentRef.current.classList.add('show-fade-up');
       }
       if (topImagen <= 500) {
