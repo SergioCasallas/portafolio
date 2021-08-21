@@ -7,7 +7,6 @@ const Aboutme = () => {
   const imagenRef = useRef();
   const textContentRef = useRef();
 
-
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const topTextContent = textContentRef.current.getBoundingClientRect().top;
@@ -20,7 +19,6 @@ const Aboutme = () => {
       }
     });
   }, [imagenRef, textContentRef]);
-
 
   return (
     <section className='aboutme'>
@@ -35,7 +33,8 @@ const Aboutme = () => {
       <div className='aboutme__content-text' ref={textContentRef}>
         <span className='aboutme__title'>About me</span>
         <p className='aboutme__description'>
-           Extensive knowledge as a Fron-end Developer, in search of innovation and job innovation and job growth.
+          Extensive knowledge as a Fron-end Developer, looking for innovation
+          and job growth.
         </p>
       </div>
     </section>
