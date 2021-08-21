@@ -7,18 +7,6 @@ const Aboutme = () => {
   const imagenRef = useRef();
   const textContentRef = useRef();
 
-  // useLayoutEffect(() => {
-  //   const topTextContent = textContentRef.current.getBoundingClientRect().top;
-  //   console.log(topTextContent);
-  //   // if(topImagen<=){}
-  //   window.addEventListener('scroll', () => {
-  //     console.log(topTextContent);
-  //     if (topTextContent === 0) {
-  //       console.log('sexoAnal');
-  //     }
-  //   });
-  //   // console.log(window.scrollY);
-  // }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -31,17 +19,12 @@ const Aboutme = () => {
       if (topImagen <= 500) {
         imagenRef.current.classList.add('show-fade-bottom');
       }
-      // console.log(topTextContent);
     });
-    // console.log(window.scrollY);
-  }, [ imagenRef, textContentRef]);
+  }, [imagenRef, textContentRef]);
 
-  const scrollY = () => {
-    console.log('scrollY');
-  };
 
   return (
-    <section className='aboutme' onScroll={scrollY}>
+    <section className='aboutme'>
       <figure className='aboutme__content-images'>
         <img
           ref={imagenRef}
@@ -53,8 +36,7 @@ const Aboutme = () => {
       <div className='aboutme__content-text' ref={textContentRef}>
         <span className='aboutme__title'>About me</span>
         <p className='aboutme__description'>
-          Amplios conocimientos como Fron-end Developer, en busca de la
-          innovacion y el crecimiento laboral.
+           Extensive knowledge as a Fron-end Developer, in search of innovation and job innovation and job growth.
         </p>
       </div>
     </section>

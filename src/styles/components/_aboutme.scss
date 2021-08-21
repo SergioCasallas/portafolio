@@ -71,3 +71,86 @@
     background-color: $colorFont;
   }
 }
+
+@media only screen and (max-width: $screenPhone) {
+  .aboutme {
+    height: auto;
+    // background-color: red;
+    padding: 0;
+    flex-direction: column;
+    &__content-text {
+      // opacity: 1;
+      width: 100%;
+      height: 50%;
+    }
+    &__content-images {
+      width: 340px;
+      height: 460px;
+    }
+    &__description {
+      font-size: 1rem;
+      width: 90%;
+      margin-top: 20px;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      width: 50%;
+    }
+
+    &__title::after {
+      // width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: $screenTablet) and (min-width: $screenPhone) {
+  .aboutme {
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+
+    &__content-text {
+      order: 0;
+      width: 100%;
+      height: 450px;
+      opacity: 0;
+    }
+
+    &__content-images {
+      order: 1;
+      width: 400px;
+      height: 550px;
+    }
+  }
+}
+
+@media only screen and (max-width: $screenLargeDestops) and (min-width: $screenTablet) {
+  .aboutme {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 50px;
+    padding-top: 100px;
+
+    &__content-images {
+      order: 1;
+      width: 340px;
+      height: 460px;
+    }
+
+    &__content-text {
+      order: 0;
+      width: 50%;
+      height: 550px;
+      opacity: 0;
+    }
+
+    &__description {
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+

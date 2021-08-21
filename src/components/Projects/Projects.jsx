@@ -36,9 +36,9 @@ const Projects = () => {
         Projects
       </span>
       <article className='projects__content'>
-        <div 
-        // ref={multipleRef} 
-        className='projects__multiple'>
+        <div
+          // ref={multipleRef}
+          className='projects__multiple'>
           <div className='projects__multiple-item'>
             <a
               className='projects__link-content'
@@ -118,7 +118,9 @@ const Projects = () => {
         </div>
         <div ref={singleRef} className='projects__single'>
           <div className='projects__single-item'>
-            <a className='projects__link-content' href='/'>
+            <a
+              className='projects__link-content'
+              href='https://qr-eight.vercel.app/'>
               <video
                 className='projects__single-video'
                 autoPlay

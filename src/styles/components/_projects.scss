@@ -20,6 +20,7 @@
   padding-top: 100px;
   color: $colorFont;
   font-family: $fontPrimary;
+
   &__content {
     display: flex;
     box-sizing: border-box;
@@ -28,11 +29,10 @@
   }
 
   &__content-images {
-
     width: 400px;
     height: 200px;
     margin: 0 auto;
-    opacity: 0.2;
+    opacity: 1;
     transition: opacity 500ms ease;
   }
 
@@ -54,7 +54,7 @@
     width: 70%;
     margin: 0 auto;
     border-radius: 5px;
-    opacity: 0.8;
+    opacity: 1;
     transition-duration: 500ms;
     transition-property: background-color opacity;
   }
@@ -138,5 +138,135 @@
     font-size: 84px;
     text-align: center;
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: $screenPhone) {
+  .projects {
+    height: auto;
+    padding-top: 100px;
+    &__content {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &__content-images {
+      // display: none;
+      // background-color: blue;
+      width: calc(100% - 30px);
+      height: calc(100%);
+      // opacity: 1;
+    }
+
+    &__multiple-item {
+      width: 100%;
+    }
+
+    &__image {
+      object-fit: contain;
+      // display: none;
+      width: 100%;
+    }
+
+    &__multiple {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 100%);
+      gap: 30px;
+      width: 100%;
+    }
+
+    &__name-proyect {
+      font-size: 1.5rem;
+    }
+    &__single {
+      padding-top: 50px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $screenTablet) and (min-width: $screenPhone) {
+  .projects {
+    height: auto;
+    // background-color: red;
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__multiple {
+      // box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      // height: 50%;
+      // display: none;
+      // background-color: green;
+      grid-template-rows: repeat(4, 1fr);
+      padding: 5em 0;
+      gap: 5em;
+      grid-template-columns: repeat(1, 100%);
+    }
+
+    &__single {
+      margin: 0 auto;
+      width: 70%;
+      height: 1000px;
+    }
+
+    &__single-item &__link-content {
+      display: block;
+      width: 500px;
+      height: 680px;
+    }
+
+    &__single-video {
+      margin: 0 auto;
+      width: 485px;
+      height: 900px;
+    }
+
+    &__multiple-item {
+      width: 100%;
+    }
+
+    &__title {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $screenLargeDestops) and (min-width: $screenTablet) {
+  .projects {
+    height: auto;
+
+    &__content {
+      flex-direction: column;
+      height: auto;
+    }
+    &__multiple {
+      margin: 10px auto;
+      width: 100%;
+    }
+    &__single {
+      padding-top: 20px;
+      width: 100%;
+    }
+
+    &__single-video {
+      margin: 0 auto;
+      width: 385px;
+      height: 800px;
+    }
+
+    &__single-item &__link-content {
+      margin: 0 auto;
+      width: 485px;
+      height: 900px;
+    }
   }
 }
