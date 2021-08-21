@@ -13,7 +13,6 @@ const Aboutme = () => {
       const topTextContent = textContentRef.current.getBoundingClientRect().top;
       const topImagen = imagenRef.current.getBoundingClientRect().top;
       if (topTextContent <= 500) {
-        // console.log('sexoAnal');
         textContentRef.current.classList.add('show-fade-up');
       }
       if (topImagen <= 500) {
